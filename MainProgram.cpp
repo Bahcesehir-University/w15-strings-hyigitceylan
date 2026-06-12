@@ -192,7 +192,6 @@ int wordCountInFile(const string& filename) {
         for(const string& line : lines)
     count += countWords(line);
     // TODO: read the file and sum the word counts of each line.
-    in.close();
     return count; // TODO: replace
 }
 
