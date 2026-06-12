@@ -186,6 +186,7 @@ int countLinesInFile(const string& filename) {
 int wordCountInFile(const string& filename) {
     ifstream in(filename);
     if (!in.is_open()) return -1;
+    in.close()
     int count = 0;
     vector<string> lines = readLines(filename);
         for(const string& line : lines)
