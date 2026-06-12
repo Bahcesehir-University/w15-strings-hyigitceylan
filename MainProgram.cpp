@@ -102,7 +102,7 @@ int countWords(const string& text) {
     bool inWord = false;
     for(char c : text){
         if (c != ' '){
-            if (inWord){count++; inWord = true;}
+            if (!inWord){count++; inWord = true;}
         }else{
             inWord = false;
         }
