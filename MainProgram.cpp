@@ -186,7 +186,7 @@ int countLinesInFile(const string& filename) {
 int wordCountInFile(const string& filename) {
     ifstream in(filename);
     if (!in.is_open()) return -1;
-    in.close()
+    in.close();
     int count = 0;
     vector<string> lines = readLines(filename);
         for(const string& line : lines)
@@ -203,7 +203,6 @@ int wordCountInFile(const string& filename) {
 // token ONLY if it equals 'target' exactly (case-sensitive).
 // If the file cannot be opened, return "" (empty string).
 // Example: file "the cat sat" with target "cat" -> "the *** sat"
-string censorWord(const string& filename, const string& target) {
 string censorWord(const string& filename, const string& target) {
     ifstream in(filename);
     if (!in.is_open()) return "";
